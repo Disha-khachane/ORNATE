@@ -1,5 +1,10 @@
 # E-Commerce Web Application
 
+For outlook of the project yor can visit the following link :
+ ornatedwd.netlify.app 
+
+
+
 This is a simple e-commerce web application that allows users to browse and purchase products. It also includes an admin panel for managing products.
 
 ORNATE-DESIGN WITH DIGNITY
