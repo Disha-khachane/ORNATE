@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>login page</title>
+   <script type="text/javascript" src=".\main.js.txt"></script>
+ <!-- <link rel="stylesheet" href="D:\login\login.css" media="screen" type="text/css" /> -->
+ <link rel="stylesheet" href=".\style.css" media="screen" type="text/css" /> 
+<!-- Registration form -->
+<form id="register-form">
+  <h1 style="font-style: forte;">Register</h1>
+  <label for="username">Username:</label>
+  <input type="text" id="username" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" required>
+  <button type="submit"><a href=".\index.html" target="_blank" style=" text-align: center; text-decoration: none;" > Register</a></button>
+</form>
+
+<!-- Login form -->
+<form id="login-form">
+  <h1>Login</h1>
+  <label for="login-username">Username:</label>
+  <input type="text" id="login-username" required>
+  <label for="login-password">Password:</label>
+  <input type="password" id="login-password" required>
+  <button type="submit"><a href=".\gallery.html" target="_blank" style=" text-align: center; text-decoration: none;" > Login</a></button>
+</form>
+
+
+<script type="text/javascript">
+    // Define login credentials
+    const adminUsername = 'admin';
+    const adminPassword = '123456';
+
+    // Add event listener to register form
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      // Prevent form submission
+      e.preventDefault();
+
+      // Retrieve input values
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Store username and password in local storage
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+
+      // Redirect to index.html page
+      window.location.href = 'index.html';
+    });
+      // Check if username and password are correct
+      if (username === adminUsername && password === adminPassword) {
+        // Redirect to admin.html page
+        window.location.href = 'D:\eeccoomm\admin.html';
+      } else if (username === storedUsername && password === storedPassword) {
+        // Redirect to index.html page
+        window.location.href = 'index.html';
+      };
+  </script>
